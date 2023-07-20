@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_tfdemo_1689833180569-push-trigger-input-set
+  identifier: Build_tfdemo_1689833180569pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_tfdemo_1689833180569
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
