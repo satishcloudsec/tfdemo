@@ -18,9 +18,20 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: Run
+                  name: Security Scan TF
+                  identifier: Security_Scan_TF
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: bridgecrew/checkov
+                    shell: Sh
+                    command: checkov -d .
+              - step:
                   identifier: echo
                   name: Terraform
                   spec:
+                    connectorRef: account.harnessImage
+                    image: hashicorp/terraform
                     shell: Sh
                     command: |-
                       echo "Terraform Init"
