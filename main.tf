@@ -1,3 +1,4 @@
+# To provision EC2 instance
 provider "aws" {
 	region="ap-south-1"
 }
