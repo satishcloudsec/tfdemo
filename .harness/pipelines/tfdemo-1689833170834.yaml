@@ -27,6 +27,9 @@ pipeline:
                       terraform init
                       echo "Tearraform Plan"
                       terraform plan
+                    envVariables:
+                      TF_VAR_accesskey: <+secrets.getValue("accesskey")>
+                      TF_VAR_secretkey: <+secrets.getValue("AWS_Secret_Access_Key")>
                   timeout: ""
                   type: Run
           platform:
