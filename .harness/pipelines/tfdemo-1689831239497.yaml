@@ -19,9 +19,13 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: Terraform
                   spec:
-                    command: echo hello world
+                    shell: Sh
+                    command: |-
+                      terraform init
+                      terraform plan
+                      #terraform apply
                   timeout: ""
                   type: Run
           platform:
