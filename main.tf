@@ -30,5 +30,5 @@ provider "aws" {
 }*/
 
 resource "aws_s3_bucket" "my_s3"{
-	bucket="tfdemobucketnull"
+	bucket="tfdemobucketnull2023"
 }
