@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_tfdemo_1689831247266-pr-trigger-input-set
+  identifier: Build_tfdemo_1689831247266prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_tfdemo_1689831247266
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
