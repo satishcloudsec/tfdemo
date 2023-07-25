@@ -37,6 +37,6 @@ resource "aws_s3_bucket" "my_s3"{
 	# checkov:skip=CKV_AWS_21:Ensure all data stored in the S3 bucket have versioning enabled
 	# checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
 	bucket="tfdemobucketnull2023"
-	#block_public_acls   = false
+	block_public_acls   = false
 	block_public_policy = false
 }
