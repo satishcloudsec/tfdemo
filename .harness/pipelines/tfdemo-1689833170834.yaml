@@ -19,6 +19,15 @@ pipeline:
             steps:
               - step:
                   type: Run
+                  name: Secrets scan
+                  identifier: Secrets_scan
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: zricethezav/gitleaks
+                    shell: Sh
+                    command: gitleaks detect -s . --no-git
+              - step:
+                  type: Run
                   name: Security Scan TF
                   identifier: Security_Scan_TF
                   spec:
